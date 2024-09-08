@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="BuildYourBowl.PointOfSale.MenuItemSelectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BuildYourBowl.PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+           
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+         
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+
+                <Style TargetType="Button" >
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Style.Resources>
+                    <Setter Property ="FontSize" Value="11"/>
+                    <Setter Property= "Margin" Value="15"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property ="FontSize" Value="15"/>
+                    <Setter Property= "Margin" Value="15"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+        </Grid.Resources>
+        
+
+        <TextBox  Grid.Row="0" Grid.Column="0">Bowls</TextBox>
+        <TextBox  Grid.Row="0" Grid.Column="1">Nachos</TextBox>
+        <TextBox  Grid.Row="0" Grid.Column="2">Sides</TextBox>
+        <TextBox  Grid.Row="0" Grid.Column="3">Drinks</TextBox>
+        <TextBox  Grid.Row="0" Grid.Column="4">Kids Meal</TextBox>
+
+
+        <Button x:Name="CustomBowl"  Grid.Row="1" Grid.Column="0" Click="AddItemClick">Custom Bowl</Button>
+        <Button x:Name="CustomNachos" Grid.Row="1" Grid.Column="1" Click="AddItemClick">Custom Nachos</Button>
+        <Button x:Name="Fries" Grid.Row="1" Grid.Column="2" Click="AddItemClick">Fries</Button>
+        <Button x:Name="AguaFresca" Grid.Row="1" Grid.Column="3" Click="AddItemClick">Agua Fresca</Button>
+        <Button x:Name="ChickenNuggets" Grid.Row="1" Grid.Column="4" Click="AddItemClick">Chicken Nuggets</Button>
+
+        <Button x:Name="Carnitas" Grid.Row="2" Grid.Column="0" Click="AddItemClick">Carnitas Bowl</Button>
+        <Button x:Name="ChickenFajita" Grid.Row="2" Grid.Column="1" Click="AddItemClick">Chicken Fajita Nachos</Button>
+        <Button x:Name="StreetCorn" Grid.Row="2" Grid.Column="2" Click="AddItemClick">Street Corn</Button>
+        <Button x:Name="Horchata" Grid.Row="2" Grid.Column="3" Click="AddItemClick">Horchata</Button>
+        <Button x:Name="CornDog" Grid.Row="2" Grid.Column="4" Click="AddItemClick">Corn Dog Bites</Button>
+
+        <Button x:Name="GreenChicken" Grid.Row="3" Grid.Column="0" Click="AddItemClick">Green Chicken Bowl</Button>
+        <Button x:Name="ClassicNachos" Grid.Row="3" Grid.Column="1" Click="AddItemClick">Classic</Button>
+        <Button x:Name="RefriedBeans" Grid.Row="3" Grid.Column="2" Click="AddItemClick">Refried Beans</Button>
+        <Button x:Name="Milk" Grid.Row="3" Grid.Column="3" Click="AddItemClick">Milk</Button>
+        <Button x:Name="Sliders" Grid.Row="3" Grid.Column="4" Click="AddItemClick">Sliders</Button>
+
+        <Button x:Name="SpicySteak" Grid.Row="4" Grid.Column="0" Click="AddItemClick">Spicy Steak Bowl</Button>
+
+
+
+
+    </Grid>
+</UserControl>

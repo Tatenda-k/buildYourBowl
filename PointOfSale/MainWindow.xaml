@@ -1,0 +1,72 @@
+﻿<Window x:Class="BuildYourBowl.PointOfSale.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuildYourBowl.PointOfSale"
+        mc:Ignorable="d"
+        Title="BuildYourBowl" Height="720" Width="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4.8*"/>
+            <RowDefinition Height="1.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <local:MenuItemSelectionControl x:Name="MenuItemDisplay" Grid.Row="0" Grid.Column="0" Visibility="Visible" />
+        <local:KidsMealControl x:Name="KidsMealControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+        <local:FriesControl x:Name="FriesControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+        <local:RefriedBeansControl x:Name="RefriedBeansControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+        <local:StreetCornControl x:Name="StreetCornControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+        <local:PaymentControl x:Name="PaymentControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+
+        <local:AguaFrescaControl x:Name="AguaFrescaControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+        <local:MilkControl x:Name="MilkControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+        <local:HorchataControl x:Name="HorchataControl" Grid.Row="0" Grid.Column="0" Visibility="Hidden" />
+
+
+        <local:EntreeControl x:Name="EntreeControl" Visibility="Hidden" Grid.Row="0" Grid.Column="0"/>
+        <local:OrderSummaryControl x:Name="OrderSummaryControl" Grid.Row="0" Grid.RowSpan="2" Grid.Column="5"  Visibility="Visible" />
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width ="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+            <Grid.Resources>
+
+                <Style TargetType="Button" >
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Style.Resources>
+                    <Setter Property ="FontSize" Value="12"/>
+                    <Setter Property= "Margin" Value="15"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property ="FontSize" Value="15"/>
+                    <Setter Property= "Margin" Value="15"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </Grid.Resources>
+
+            <Button x:Name="Cancel" Grid.Column="0" Width ="200" Height="90" Click="CancelOrder">Cancel Order</Button>
+            <Button x:Name="Back" Grid.Column="1" Width="200" Height="90" Click="BackToMenu">Back To Menu</Button>
+            <Button x:Name="Complete" Grid.Column="2" Width="200" Height="90" Click="CompleteOrder">CompleteOrder</Button>
+        </Grid>
+        <Border x:Name="EntreeContainer" Margin="0" BorderThickness="0"/>
+        <Border x:Name="mainContainer" Margin="1" BorderThickness="5" Grid.Column="0"/>
+        <Border x:Name="SideContainer" Margin="1" BorderThickness="5" Grid.Column="1"/>
+        <Border x:Name="DrinkContainer" Margin="1" BorderThickness="5" Grid.Column="2"/>
+
+
+
+
+
+
+    </Grid>
+</Window>

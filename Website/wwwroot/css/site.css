@@ -1,0 +1,90 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.tables {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid;
+}
+
+    .tables td, .tables th {
+        border: 2px solid black;
+        padding: 8px;
+    }
+
+#ingredients-table{
+    Width: 90%
+}
+#salsa-table{
+    width: 50%;
+   
+}
+  
+
+    .tables tr:hover {
+        background-color: #ddd;
+    }
+
+    .tables th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+container {
+    display: flex;
+    flex-direction: row-reverse; /* Arrange items from right to left */
+    justify-content: flex-start; /* Align items to the start (right) of the container */
+}
+
+item {
+    background-color: lightgrey;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px; /* Rounded border */
+    border: 2px solid pink;
+  
+}
+
+.item{
+    text-align:left;
+}
+.title-heading {
+    text-align: left;
+    color:dodgerblue;
+}
+.item-name{
+    color:green;
+}
+
+#id ingre{
+    text-align: center
+}
+
+.thick-bar{
+    height:5px;
+    background-color: black;
+    margin-top: 10px;
+}
+.space{
+    margin-bottom:20px;
+}

@@ -1,0 +1,35 @@
+﻿@page
+@using BuildYourBowl.Data;
+@model Website.Pages.ReviewsModel
+@{
+    ViewData["Title"] = "Reviews";
+
+}
+
+
+
+<h1>Reviews</h1>
+<form id="search-form" method="post">
+    <div>
+      
+        <textarea placeholder="Enter a review" cols=40 name="NewReview" value="@Model.NewReview" rows=5 input type="text"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Submit review" />
+
+    </div>
+</form>
+
+@foreach(Review rev in Model.Reviews)
+{
+    <div class="space">
+        <p>@rev.Text</p>
+        <p>@rev.Time</p>
+
+
+        </div>
+        <div class="thick-bar"></div>
+
+}
+
+

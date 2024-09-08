@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="BuildYourBowl.PointOfSale.PaymentControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BuildYourBowl.PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.Resources>
+            <Style TargetType="CheckBox">
+                <Setter Property="Margin" Value="25,10,10,10"/>
+                <Setter Property ="FontSize" Value="11"/>
+            </Style>
+
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="0,10,10,10"/>
+            </Style>
+            
+        </Grid.Resources>
+        <StackPanel Margin="20,50,0,0">
+            <TextBlock FontSize="24" Text="Order Summary"/>
+            <TextBlock  Text="{Binding Path=  Subtotal,StringFormat='SubTotal: {0:C}'}"/>
+            <TextBlock  Text="{Binding Path= Tax,StringFormat='Tax: {0:C}'}"/>
+            <TextBlock  Text="{Binding  Path=Total,StringFormat='Total :{0:C}'}"/>
+            <StackPanel    Orientation="Horizontal">
+                <TextBlock Text="Enter Payment Amount: "/>
+                <TextBox  Width="120"  >
+                <TextBox.Text>
+                        <Binding Path="Paid" StringFormat=' {0:C}' UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule/>
+                            </Binding.ValidationRules>
+                    </Binding>
+                 
+                </TextBox.Text>
+                  
+            </TextBox>
+                <TextBlock Margin="20,0,0,0"  Text="{Binding Path = DisplayError}"   Width="120" />
+            </StackPanel>
+            <TextBlock  Text="{Binding Path= Change,StringFormat='Change: {0:C}'}" />
+            <Button Background ="Green" x:Name="Complete" Click="ClickComplete" Width="220" IsEnabled="{ Binding Path=Finalize}" >Finalize Payment and Print Receipt</Button>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>
